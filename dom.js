@@ -24,11 +24,28 @@ for(let i=0;i<li.length;i++) {
      
 //      thirdItem.style.visibility = 'hidden';
 
-let secondItem = document.querySelectorAll('.list-group-item');
-secondItem[1].style.backgroundColor = 'green';
+// let secondItem = document.querySelectorAll('.list-group-item');
+// secondItem[1].style.backgroundColor = 'green';
 
-let odd = document.querySelectorAll('li:nth-child(odd)');
+// let odd = document.querySelectorAll('li:nth-child(odd)');
 
-for(let i=0;i<odd.length;i++){
-        odd[i].style.color = 'green';
-}
+// for(let i=0;i<odd.length;i++){
+//         odd[i].style.color = 'green';
+// }
+
+let itemList = document.querySelector('#items');
+itemList.parentElement.style.backgroundColor = 'cyan';
+
+itemList.children[1].style.backgroundColor = 'yellow';
+
+console.log(itemList.lastChild);
+itemList.lastElementChild.textContent = 'Hello world';
+
+console.log(itemList.nextSibling);
+console.log(itemList.nextElementSibling);
+
+console.log(itemList.previousSibling);
+itemList.previousElementSibling.style.color = 'blue';
+
+
+
