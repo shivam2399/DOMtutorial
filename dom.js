@@ -16,10 +16,19 @@ for(let i=0;i<li.length;i++) {
         li[i].style.fontWeight = 'bold';
      }
 
-     let secondItem = document.querySelector('.list-group-item:nth-child(2)');
+//      let secondItem = document.querySelector('.list-group-item:nth-child(2)');
 
-     secondItem.style.backgroundColor = 'green';
+//      secondItem.style.backgroundColor = 'green';
      
-     let thirdItem = document.querySelector('.list-group-item:nth-child(3)');
+//      let thirdItem = document.querySelector('.list-group-item:nth-child(3)');
      
-     thirdItem.style.visibility = 'hidden';
+//      thirdItem.style.visibility = 'hidden';
+
+let secondItem = document.querySelectorAll('.list-group-item');
+secondItem[1].style.backgroundColor = 'green';
+
+let odd = document.querySelectorAll('li:nth-child(odd)');
+
+for(let i=0;i<odd.length;i++){
+        odd[i].style.color = 'green';
+}
