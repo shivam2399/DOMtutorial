@@ -47,5 +47,20 @@ console.log(itemList.nextElementSibling);
 console.log(itemList.previousSibling);
 itemList.previousElementSibling.style.color = 'blue';
 
+let newDiv = document.createElement('div');
+newDiv.className = 'hello';
+newDiv.id = 'hello1';
+newDiv.setAttribute('title', 'Hello div');
 
+let newDivText = document.createTextNode('Hello world');
+newDiv.appendChild(newDivText);
+
+let container = document.querySelector('header .container');
+let h1 = document.querySelector('header h1');
+
+container.insertBefore(newDiv, h1);
+
+let parentNode = document.getElementById('items');
+
+parentNode.innerHTML = '<li>Hello World</li>' + parentNode.innerHTML;
 
